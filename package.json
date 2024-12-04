@@ -1,7 +1,7 @@
 {
   "name": "@sadzurami/scheduler-registry",
   "version": "1.0.1",
-  "description": "Scheduler registry for my projects",
+  "description": "Simple registry for timeouts and intervals",
   "author": "Sadzurami (https://github.com/Sadzurami)",
   "license": "MIT",
   "repository": {
