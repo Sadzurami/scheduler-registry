@@ -1,18 +1,27 @@
+import { AddIntervalOptions } from './types/add-interval.options.types';
+import { AddTimeoutOptions } from './types/add-timeout.options.types';
+
 export class SchedulerRegistry {
   private readonly timeouts: Map<string, NodeJS.Timeout> = new Map();
   private readonly intervals: Map<string, NodeJS.Timeout> = new Map();
 
-  public addTimeout(name: string, timeout: NodeJS.Timeout) {
+  public addTimeout(name: string, timeout: NodeJS.Timeout, options?: AddTimeoutOptions) {
+    options = { overwrite: false, ...options };
+
     if (this.hasTimeout(name)) {
-      throw new Error(`Timeout with name '${name}' already exists`);
+      if (options.overwrite) this.clearTimeout(name);
+      else throw new Error(`Timeout with name '${name}' already exists`);
     }
 
     this.timeouts.set(name, timeout);
   }
 
-  public addInterval(name: string, interval: NodeJS.Timeout) {
+  public addInterval(name: string, interval: NodeJS.Timeout, options?: AddIntervalOptions) {
+    options = { overwrite: false, ...options };
+
     if (this.hasInterval(name)) {
-      throw new Error(`Interval with name '${name}' already exists`);
+      if (options.overwrite) this.clearInterval(name);
+      else throw new Error(`Interval with name '${name}' already exists`);
     }
 
     this.intervals.set(name, interval);
