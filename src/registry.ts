@@ -1,5 +1,5 @@
-import { AddIntervalOptions } from './types/add-interval.options.types';
-import { AddTimeoutOptions } from './types/add-timeout.options.types';
+import { AddIntervalOptions } from './types/add-interval.options.type';
+import { AddTimeoutOptions } from './types/add-timeout.options.type';
 
 export class SchedulerRegistry {
   private readonly timeouts: Map<string, NodeJS.Timeout> = new Map();
