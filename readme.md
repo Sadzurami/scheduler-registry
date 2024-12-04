@@ -1,6 +1,6 @@
 # scheduler-registry
 
-> Scheduler registry for my projects
+> Simple registry for timeouts and intervals
 
 ## Install
 
