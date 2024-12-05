@@ -4,5 +4,5 @@ export type AddIntervalOptions = {
    *
    * @default false
    */
-  overwrite?: boolean;
+  override?: boolean;
 };

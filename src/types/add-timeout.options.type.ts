@@ -4,5 +4,5 @@ export type AddTimeoutOptions = {
    *
    * @default false
    */
-  overwrite?: boolean;
+  override?: boolean;
 };

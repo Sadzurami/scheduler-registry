@@ -6,10 +6,10 @@ export class SchedulerRegistry {
   private readonly intervals: Map<string, NodeJS.Timeout> = new Map();
 
   public addTimeout(name: string, timeout: NodeJS.Timeout, options?: AddTimeoutOptions) {
-    options = { overwrite: false, ...options };
+    options = { override: false, ...options };
 
     if (this.hasTimeout(name)) {
-      if (options.overwrite) this.clearTimeout(name);
+      if (options.override) this.clearTimeout(name);
       else throw new Error(`Timeout with name '${name}' already exists`);
     }
 
@@ -17,10 +17,10 @@ export class SchedulerRegistry {
   }
 
   public addInterval(name: string, interval: NodeJS.Timeout, options?: AddIntervalOptions) {
-    options = { overwrite: false, ...options };
+    options = { override: false, ...options };
 
     if (this.hasInterval(name)) {
-      if (options.overwrite) this.clearInterval(name);
+      if (options.override) this.clearInterval(name);
       else throw new Error(`Interval with name '${name}' already exists`);
     }
 
