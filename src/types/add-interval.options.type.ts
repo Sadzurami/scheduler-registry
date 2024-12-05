@@ -1,6 +1,6 @@
 export type AddIntervalOptions = {
   /**
-   * If set to `true`, the interval with the same name will be cleared and replaced with the new one.
+   * Clear and override interval with the same name.
    *
    * @default false
    */
