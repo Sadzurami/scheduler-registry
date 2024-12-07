@@ -1,6 +1,6 @@
 # scheduler-registry
 
-> Simple registry for timeouts and intervals.
+> Simple registry for timeouts and intervals
 
 Allows to keep timeouts and intervals in one place and manage them.
 

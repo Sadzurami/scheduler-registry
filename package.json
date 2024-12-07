@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sadzurami/scheduler-registry.git"
+    "url": "https://github.com/Sadzurami/scheduler-registry"
   },
   "engines": {
     "node": ">=18"
