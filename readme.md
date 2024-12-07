@@ -9,7 +9,7 @@ Like [@nestjs/schedule](https://github.com/nestjs/schedule), but without the add
 ## Install
 
 ```sh
-npm install https://github.com/Sadzurami/scheduler-registry
+npm install @sadzurami/scheduler-registry
 ```
 
 ## Usage
