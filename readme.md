@@ -33,6 +33,10 @@ console.log(registry.hasInterval('interval-1')); // true
 
 // Clear all
 setTimeout(() => registry.clearAll(), 5000);
+
+// Check existences after clearing
+console.log(registry.hasTimeout('timeout-1')); // false
+console.log(registry.hasInterval('interval-1')); // false
 ```
 
 ## API
