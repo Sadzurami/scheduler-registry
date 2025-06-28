@@ -67,19 +67,19 @@ Get an interval by name.
 
 - `name` (string) - Name of interval.
 
-#### `.getTimeouts(): NodeJS.Timeout[]`
+#### `.getAllTimeouts(): NodeJS.Timeout[]`
 
 Get all registered timeouts.
 
-#### `.getIntervals(): NodeJS.Timeout[]`
+#### `.getAllIntervals(): NodeJS.Timeout[]`
 
 Get all registered intervals.
 
-#### `.getTimeoutNames(): string[]`
+#### `.getAllTimeoutsNames(): string[]`
 
 Get all timeout names.
 
-#### `.getIntervalNames(): string[]`
+#### `.getAllIntervalsNames(): string[]`
 
 Get all interval names.
 
@@ -111,11 +111,11 @@ Clear a specific interval.
 
 - `name` (string) - Name of interval.
 
-#### `.clearTimeouts(): void`
+#### `.clearAllTimeouts(): void`
 
 Clear all registered timeouts.
 
-#### `.clearIntervals(): void`
+#### `.clearAllIntervals(): void`
 
 Clear all registered intervals.
 
