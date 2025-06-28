@@ -95,6 +95,11 @@ Check if an interval exists.
 
 - `name` (string) - Name of interval.
 
+#### `.clear(): void`
+
+Clear all registered timeouts and intervals.
+This is an alias for `clearAll()`.
+
 #### `.clearAll(): void`
 
 Clear all registered timeouts and intervals.
