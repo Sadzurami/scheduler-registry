@@ -86,7 +86,7 @@ export class SchedulerRegistry {
    *
    * @returns Timeout instances.
    */
-  public getTimeouts() {
+  public getAllTimeouts() {
     return [...this.timeouts.values()];
   }
 
@@ -95,7 +95,7 @@ export class SchedulerRegistry {
 
    * @returns Interval instances.
    */
-  public getIntervals() {
+  public getAllIntervals() {
     return [...this.intervals.values()];
   }
 
@@ -104,7 +104,7 @@ export class SchedulerRegistry {
    *
    * @returns String array of timeout names.
    */
-  public getTimeoutsNames() {
+  public getAllTimeoutsNames() {
     return [...this.timeouts.keys()];
   }
 
@@ -113,7 +113,7 @@ export class SchedulerRegistry {
    *
    * @returns String array of interval names.
    */
-  public getIntervalsNames() {
+  public getAllIntervalsNames() {
     return [...this.intervals.keys()];
   }
 
@@ -139,8 +139,8 @@ export class SchedulerRegistry {
    * Clear all registered timeouts and intervals.
    */
   public clearAll() {
-    this.clearTimeouts();
-    this.clearIntervals();
+    this.clearAllTimeouts();
+    this.clearAllIntervals();
   }
 
   /**
@@ -170,16 +170,16 @@ export class SchedulerRegistry {
   /**
    * Clear all registered timeouts.
    */
-  public clearTimeouts() {
-    const names = this.getTimeoutsNames();
+  public clearAllTimeouts() {
+    const names = this.getAllTimeoutsNames();
     for (const name of names) this.clearTimeout(name);
   }
 
   /**
    * Clear all registered intervals.
    */
-  public clearIntervals() {
-    const names = this.getIntervalsNames();
+  public clearAllIntervals() {
+    const names = this.getAllIntervalsNames();
     for (const name of names) this.clearInterval(name);
   }
 }
