@@ -137,6 +137,14 @@ export class SchedulerRegistry {
 
   /**
    * Clear all registered timeouts and intervals.
+   * This is an alias for `clearAll()`.
+   */
+  public clear() {
+    this.clearAll();
+  }
+
+  /**
+   * Clear all registered timeouts and intervals.
    */
   public clearAll() {
     this.clearAllTimeouts();
